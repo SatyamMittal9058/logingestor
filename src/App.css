@@ -1,1 +1,41 @@
+.inputpage{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  background-color: #005555;
+  border-radius: 10px;
+}
+.form{
+  layout:vertical;
+  
+}
+.btn{
+  width:200px;
+  height:40px;
+  margin:5px;
+  border-radius:5px;
+  background-color:rgb(180, 46, 46)
+  
+  
+}
+.btn-container{
+  display:flex;
+  margin:20px;
+  
+}
+input{
+  width:450px;
+  height:40px;
+  margin:5px;
+  border-radius: 5px;
+  padding-left:20px;
+  font-size:25px;
+}
+.output{
+  background-color:#005555
+}
+.heading{
+  justify-content:center;
+  display:flex;
+}
 

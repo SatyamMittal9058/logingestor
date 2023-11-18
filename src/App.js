@@ -1,12 +1,16 @@
-import inputPage from "./components/inputPage";
+import Inputpage from "./components/Inputpage";
+import "./App.css";
+
 
 function App() {
   return (
     <div>
-      <inputPage/>
+      <div>
+        <Inputpage/>
+      </div>
     </div>
-      
+
+
   );
 }
-
 export default App;
