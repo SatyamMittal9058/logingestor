@@ -11,5 +11,5 @@ const LogSchema=new mongoose.Schema({
         parentResourceId:String,
     }
 })
-const logs=mongoose.model('log',LogSchema);
-module.exports=logs ;
+const Logs=mongoose.model('Logs',LogSchema);
+module.exports=Logs ;

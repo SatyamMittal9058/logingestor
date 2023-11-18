@@ -13,6 +13,8 @@ db.on("connected", () => {
     console.log("Mongodb connected successfully");
 })
 
+
+
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -56,19 +58,12 @@ app.post('/search', async (req, res) => {
     }
     // console.log(req.body)
     const getlogs = await Log.find(query);
-    //     level: req.body.level,
-    //     message: req.body.message,
-    //     resourceId: req.body.resourceId,
-    //     timestamp: req.body.timestamp,
-    //     traceId: req.body.traceId,
-    //     spanId: req.body.spanId,
-    //     commit: req.body.commit,
-    //     'metadata.parentResourceId': req.body.pareentResourceId,
-    // });
-    // console.log("hi satyam");
-    // console.log(getlogs);
     res.json(getlogs);
 })
+
+
+
+
 app.listen(4000);
 
 

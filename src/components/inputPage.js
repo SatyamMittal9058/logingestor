@@ -13,6 +13,7 @@ const Inputpage = () => {
         }
     });
     const [filterLog, setFilterLog] = useState([]);
+    
     const handleChange = (e) => {
 
         if (e.target.name.includes("metadata.")) {
@@ -29,6 +30,8 @@ const Inputpage = () => {
             setQuery({ ...query, [e.target.name]: e.target.value });
         }
     }
+
+
     const handleSubmit = async (e) => {
         const res = await fetch('http://localhost:4000/logs', {
             method: 'POST',
@@ -37,7 +40,6 @@ const Inputpage = () => {
                 'Content-Type': 'application/json',
             }
         })
-        const saveData = await res.json();
     }
     const handleSearch = async (e) => {
         const allLogs = await fetch('http://localhost:4000/search', {
@@ -48,11 +50,13 @@ const Inputpage = () => {
             }
         })
         const searchData = await allLogs.json();
+        if(searchData.length===0) {
+            alert('No logs found');
+        }
         setFilterLog(searchData);
     }
-    //  useEffect(()=>{
-    //  handleSearch();
-    // },[]);
+    
+    
 
     return (
         <div>
